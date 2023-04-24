@@ -1,0 +1,105 @@
+<h2>Edita los datos de un participante</h2>
+<div class="miFormulario">
+    <form [formGroup]="MyNewFormEditUser" (ngSubmit)="Clic(MyNewFormEditUser.value)">
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Usuario a editar</span>
+            </div>
+            <select name="usuario" id="usuario" class="form-control" formControlName="idToEdit">
+                <option id="userToEdit" *ngFor="let user of users" value={{user.id}}>({{user.id}}) {{user.nombre}}
+                    {{user.apellido1}}</option>
+            </select>
+        </div>
+        <!-- Campo nombre  -->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Nombre *</span>
+            </div>
+            <input class="form-control" type="text" name="nombre" formControlName="nombre" placeholder="Ej: Eloi">
+        </div>
+        <div *ngIf="nombre.invalid" class="alert alert-danger">Campo "nombre" obligatorio.</div>
+
+        <!-- Campo apellido  1-->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Apellido 1 *</span>
+            </div>
+            <input class="form-control" type="text" name="apellido1" formControlName="apellido1"
+                placeholder="Ej: Pellin">
+        </div>
+        <div *ngIf="apellido1.invalid" class="alert alert-danger">Campo "Apellido 1" obligatorio.</div>
+
+        <!-- Campo apellido  2-->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Apellido 2</span>
+            </div>
+            <input class="form-control" type="text" name="apellido2" formControlName="apellido2"
+                placeholder="Ej: Mongay">
+        </div>
+
+
+        <!-- Campo email-->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Email *</span>
+            </div>
+            <input class="form-control" type="email" name="email" formControlName="email"
+                placeholder="Ej: eloip@gmail.com">
+        </div>
+        <div *ngIf="email.invalid" class="alert alert-danger">Campo "Email" obligatorio.</div>
+
+        <!-- Campo telefono-->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Teléfono 1 *</span>
+            </div>
+            <input class="form-control" type="text" name="telefono" formControlName="telefono" maxlength="9"
+                minlength="9" placeholder="Ej: 648767687">
+        </div>
+        <div *ngIf="telefono.invalid" class="alert alert-danger">Campo "Telefono 1" inválido.</div>
+
+        <!-- Campo telefono-->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Teléfono 2</span>
+            </div>
+            <input class="form-control" type="text" name="telefono2" formControlName="telefono2" maxlength="9"
+                minlength="9" placeholder="Ej: 964767676">
+        </div>
+        
+
+        <!-- Campo dni-->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">DNI *</span>
+            </div>
+            <input class="form-control" type="text" name="dni" formControlName="dni" maxlength="9" minlength="9"
+                placeholder="Ej: 20578776Y">
+        </div>
+        <div *ngIf="dni.invalid" class="alert alert-danger">Campo "DNI" obligatorio.</div>
+
+        <!-- Campo fecha de nacimiento-->
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Fecha de nacimiento *</span>
+            </div>
+            <input class="form-control" type="date" name="fNacimiento" formControlName="fNacimiento"
+                max="{{ eighteenYearsAgo | date:'yyyy-MM-dd' }}">
+        </div>
+        <div *ngIf="fNacimiento.invalid" class="alert alert-danger">Campo "Fecha de nacimiento" obligatorio.</div>
+
+
+        <!-- Checkbox mayor de edad -->
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" name="adulto" formControlName="adulto" required>
+            <label class="form-check-label">Confirmo que soy mayor de edad *</label>
+        </div>
+        <div *ngIf="adulto.invalid" class="alert alert-danger">Campo "Adulto" obligatorio.</div>
+
+        <!-- Botón enviar -->
+        <button type="submit" (click)="simpleAlert()" [disabled]="MyNewFormEditUser.invalid">Editar</button>
+
+    </form>
+</div>

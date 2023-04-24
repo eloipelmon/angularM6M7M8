@@ -1,0 +1,29 @@
+body{
+    background-color:rgb(70, 70, 70);
+    text-align: center;
+}
+h1{
+    color:  #0063a7;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+p{
+ width: 650px;
+ color: white;
+}
+span{
+    color: #0063a7;
+    font-weight: bold;
+}
+@media screen and (max-width: 650px) {
+    img{
+        width: 95%;
+        padding: 5%;
+    }
+    p{
+        width: 95%;
+        padding: 5%;
+    }
+}

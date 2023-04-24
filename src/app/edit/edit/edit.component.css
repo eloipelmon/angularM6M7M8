@@ -1,0 +1,13 @@
+.miFormulario{
+    display: flex;
+    justify-content: center;
+}
+button{
+    border-radius: 5px;
+    border: 1px solid rgb(62, 212, 205);
+    margin-bottom: 15px;
+}
+button:hover{
+    background-color: rgb(62, 212, 205);
+    border: 1px solid #fff;
+}

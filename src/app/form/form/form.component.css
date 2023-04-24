@@ -1,0 +1,19 @@
+body{
+    top: 0;
+    left: 0;
+    margin: 0;
+    background-color: lightseagreen;
+    padding: 15px;
+    text-align: center;
+}
+.miFormulario{
+    display: flex;
+    justify-content: center;
+}
+span{
+    min-width: 125px;
+}
+button{
+    border-radius: 5px;
+    background-color: rgb(62, 212, 205);
+}

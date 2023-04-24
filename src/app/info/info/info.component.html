@@ -1,0 +1,35 @@
+<body>
+    <h1>Participantes del sorteo</h1>
+    <img src="../../../assets/ps4.png" width="650">
+    <h2>Consulta un participante en concreto</h2>
+    <div class="container">
+        <input type="text" name="filtro" id="filtro" (keyup)="filterTable()" placeholder="Escribe el nombre...">
+    </div>
+    <div class="container">
+        <div class="buscador">
+            <table id="miTabla">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Apellido 2</th>
+                        <th>Email</th>
+                        <th>ID</th>
+                        <th>Funciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td>{{user.nombre}}</td>
+                        <td>{{user.apellido1}}</td>
+                        <td>{{user.apellido2}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.id}}</td>
+                        <td><button class="eliminar" (click)="deleteUser(user.id)">Eliminar usuario</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <app-edit></app-edit>
+</body>

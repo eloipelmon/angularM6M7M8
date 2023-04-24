@@ -1,0 +1,58 @@
+body{
+    background-color:rgb(70, 70, 70);
+    text-align: center;
+}
+.tBuscador{
+    color: lightseagreen;
+    font-weight: bold;
+    padding: 10px;
+}
+.buscador thead {
+    background-color: lightseagreen;
+}
+.buscador tbody {
+    background-color: rgba(38, 187, 179, 0.795);
+}
+th {
+    padding: 15px;
+}
+
+td {
+    padding: 15px;
+}
+tbody tr:hover{
+    background-color: rgb(255, 255, 255,0.3);
+    cursor: default;
+}
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+input{
+    margin: 25px;
+    padding: 3px;
+    background-color: rgb(255,255,255,0.2);
+    border: none;
+    border-radius: 10px;
+    color: white;
+}
+input::placeholder{
+    color: rgb(255, 255, 255,0.5);
+}
+.eliminar{
+    background-color: red;
+    border-radius: 5px;
+}
+.eliminar:hover{
+    color: red;
+    background-color: aliceblue;
+    border: solid 1px white;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+#miTabla{
+    margin-bottom: 15px;
+    text-align: justify;
+}

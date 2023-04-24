@@ -1,0 +1,20 @@
+header{
+    padding: 15px;
+    background-color: rgb(49, 49, 49);
+    color: lightseagreen;
+    text-align: center;
+}
+button{
+    margin: 3px;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: lightseagreen;
+}
+button:hover{
+    background-color: rgb(32, 223, 213);
+    font-weight: bold;
+}
+button:focus{
+    outline: none;
+    transition: 0.1;
+}
